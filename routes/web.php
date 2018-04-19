@@ -39,10 +39,20 @@ Route::get('/contacto/{nombre?}/{edad?}', function ($nombre='LOLO', $edad=null) 
     ]);
 
 
-Route::get('/frutas', 'FrutasController@getIndex');
+/*Route::get('/frutas', 'FrutasController@getIndex');
 Route::get('/naranjas/{admin?}', ['middleware' => 'EsAdmin',
                          'uses' => 'FrutasController@getNaranjas'
                         ]);
-Route::get('/peras', 'FrutasController@anyPeras');
+Route::get('/peras', 'FrutasController@anyPeras');*/
 
 //Route::controller('frutas','FrutasController');
+
+Route::group( ['prefix' => 'fruteria'] , function(){
+
+    Route::get('/frutas', 'FrutasController@getIndex');
+    Route::get('/naranjas/{admin?}', ['middleware' => 'EsAdmin',
+                                      'uses' => 'FrutasController@getNaranjas'
+    ]);
+    Route::get('/peras', 'FrutasController@anyPeras');
+
+});

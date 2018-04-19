@@ -16,7 +16,7 @@ class EsAdmin
     public function handle($request, Closure $next)
     {
         if(is_null($request->route('admin'))){
-            return redirect('peras');
+            return redirect('fruteria/peras');
         }
         return $next($request);
     }
