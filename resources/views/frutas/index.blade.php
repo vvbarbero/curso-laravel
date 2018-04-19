@@ -1,6 +1,7 @@
 <h1>Listado de Frutas (accion controller)</h1>
 
-<a href="{{ action('FrutasController@getNaranjas') }}">Ir a naranjas</a>
+{{--<a href="{{ action('FrutasController@getNaranjas') }}">Ir a naranjas</a>--}}
+<a href="{{ route('naranjitas') }}">Ir a naranjas</a>
 <br>
 <a href="{{ action('FrutasController@anyPeras') }}">Ir a peras</a>
 
