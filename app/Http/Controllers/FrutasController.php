@@ -7,15 +7,15 @@ use Illuminate\Http\Request;
 class FrutasController extends Controller
 {
     // Accion que devuelve una vista
-    public function index(){
+    public function getIndex(){
         return view('frutas.index')->with('frutas', array('naranja','pera','sandia','fresa','melon','piña'));
     }
 
-    public function naranjas(){
+    public function getNaranjas(){
         return 'Accion de NARANJAS';
     }
 
-    public function peras(){
+    public function anyPeras(){
         return 'Accion de PERAS';
     }
 }

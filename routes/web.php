@@ -39,6 +39,10 @@ Route::get('/contacto/{nombre?}/{edad?}', function ($nombre='LOLO', $edad=null) 
     ]);
 
 
-Route::get('/frutas', 'FrutasController@index');
-Route::get('/naranjas', 'FrutasController@naranjas');
-Route::get('/peras', 'FrutasController@peras');
+Route::get('/frutas', 'FrutasController@getIndex');
+Route::get('/naranjas/{admin?}', ['middleware' => 'EsAdmin',
+                         'uses' => 'FrutasController@getNaranjas'
+                        ]);
+Route::get('/peras', 'FrutasController@anyPeras');
+
+//Route::controller('frutas','FrutasController');
