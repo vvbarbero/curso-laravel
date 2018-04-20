@@ -61,3 +61,5 @@ Route::group( ['prefix' => 'fruteria'] , function(){
 Route::post('/recibir', 'FrutasController@recibirFormulario');
 
 Route::get('notas', 'NotesController@getIndex');
+
+Route::get('nota/{id}','NotesController@getNote');
