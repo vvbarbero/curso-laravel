@@ -13,10 +13,18 @@ class AddFieldFrutas extends Migration
      */
     public function up()
     {
-        Schema::table('frutas', function(Blueprint $table){
+       /* Schema::table('frutas', function(Blueprint $table){
             $table->string('pais')->after('temporada');
             $table->renameColumn('nombre_fruta', 'nombre');
-        });
+        });*/
+
+       DB::statement('
+                CREATE TABLE probandosql(
+                  id int(255) auto_increment not null ,
+                  publication int(255),
+                  primary key (id)
+                );
+       ');
     }
 
     /**
