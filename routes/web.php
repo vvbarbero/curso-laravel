@@ -52,8 +52,10 @@ Route::group( ['prefix' => 'fruteria'] , function(){
     Route::get('/frutas', 'FrutasController@getIndex');
     Route::get('/naranjas/{admin?}', ['middleware' => 'EsAdmin',
                                       'uses' => 'FrutasController@getNaranjas',
-                                      'as' => 'naranjitas'
+                                      'as' => 'naranjitas'   //alias de la ruta
     ]);
     Route::get('/peras', 'FrutasController@anyPeras');
 
 });
+
+Route::post('/recibir', 'FrutasController@recibirFormulario');

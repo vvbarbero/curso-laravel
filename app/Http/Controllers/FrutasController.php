@@ -18,4 +18,11 @@ class FrutasController extends Controller
     public function anyPeras(){
         return 'Accion de PERAS';
     }
+
+    public function recibirFormulario(Request $request){
+        $data = $request;
+
+//        return 'El nombre de la fruta es: '.$data['nombre'];
+        return 'El nombre de la fruta es: '.$request->input('nombre');
+    }
 }
