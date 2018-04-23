@@ -1,5 +1,7 @@
 <h1>APLICACION DE NOTAS</h1>
 
+<a href="{{ url('/notas/save-note') }}">Crear Notas</a>
+
 <h3>Listado de Notas:</h3>
 
 <ul>

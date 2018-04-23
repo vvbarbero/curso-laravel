@@ -63,3 +63,7 @@ Route::post('/recibir', 'FrutasController@recibirFormulario');
 Route::get('notas', 'NotesController@getIndex');
 
 Route::get('nota/{id}','NotesController@getNote');
+
+Route::get('notas/save-note','NotesController@getSaveNote');
+
+Route::post('notas/note','NotesController@postNote');
