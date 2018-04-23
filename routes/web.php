@@ -65,5 +65,6 @@ Route::get('notas', 'NotesController@getIndex');
 Route::get('nota/{id}','NotesController@getNote');
 
 Route::get('notas/save-note','NotesController@getSaveNote');
+Route::get('notas/delete-note/{id}','NotesController@getDeleteNote');
 
 Route::post('notas/note','NotesController@postNote');
